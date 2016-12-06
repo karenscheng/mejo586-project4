@@ -141,7 +141,6 @@ h2{
 .twitter{
   padding-top: 1px;
   background-color: rgba(255,255,255,0.8);
-  border: solid 1px black;
 }
 
 .twitter h3{
@@ -192,4 +191,26 @@ hr{
 
 .section-5 .flickr-img:hover{
   opacity: .5;
+}
+
+.twitter-tweet img{
+  width: auto;
+  margin: 5px;
+}
+
+.twitter-tweet a{
+  text-decoration: none;
+}
+
+.twitter-tweet hr{
+  border-top: 1px solid #8c8b8b;
+}
+
+/*.twitter-tweet .float-right{
+  float: right;
+  height: 50px;
+}*/
+
+.twitter-tweet .twitter-img{
+  float: left;
 }

@@ -1,4 +1,6 @@
 <?php
+echo '<link href="css/styles.css" rel="stylesheet">';
+
 ini_set('display_errors', 1);
 require_once('TwitterAPIExchange.php');
 
@@ -40,10 +42,11 @@ $tweetData = json_decode($twitter->setGetfield($getfield)
 foreach($tweetData['statuses'] as $index => $items){
 
       $userArray = $items['user'];
-      echo '<div class="twitter-tweet"> <a href="http://twitter.com/' .
-      $userArray['screen_name'] . '"><img src="' . $userArray['profile_image_url'] .
-      '"><a href="http://twitter.com/' . $userArray['screen_name'] . '">' .
-      $userArray['name'] . '</a><br/>' . $items['text'];
-      echo '<br/>' . $items['created_at'];
-      echo '</div>';
+      echo '<div class="twitter-tweet"><div class="twitter-img"><img src="' . $userArray['profile_image_url'] .
+      '"></div><span class="float-right"><a href="http://twitter.com/ target="_newtab"' . $userArray['screen_name'] . '">@' .
+      $userArray['name'] . '</a></span><a href="http://twitter.com/ target="_newtab"' .
+      $userArray['screen_name'] . '"></a>';
+      echo '<br>' . $items['text'] . '</div>';
+      echo '</div><div style="clear: both"></div><hr>';
+      // echo '<hr>';
 };
